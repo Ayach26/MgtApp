@@ -12,10 +12,13 @@ String message = (String) request.getAttribute( "login" );
 String name = (String) session.getAttribute( "name" );
 %>
 
-<br><br>
- <%= message %> <br><br>
-
-こんにちは　<%= name %> さん<br><br>
+  <br>
+  <br>
+  <%=message%>
+  <br>
+  <br> こんにちは <%=name%> さん
+  <br>
+  <br>
 
 <a href="/jsp_servlet/result.jsp">前のページに戻る</a>
 <br><br><br><br>
