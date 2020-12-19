@@ -26,7 +26,7 @@ public class SearchServlet extends HttpServlet {
     ResultSet rset = null;
 
     // 文字コードの設定
-    request.setCharacterEncoding("Windows-31J");
+    request.setCharacterEncoding("utf-8");
 
     // index.jspで入力したnameの取得
     String name = request.getParameter("name");
