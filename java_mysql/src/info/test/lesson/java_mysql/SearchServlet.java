@@ -42,7 +42,6 @@ public class SearchServlet extends HttpServlet {
 
     try {
       // JDBC Driver の登録
-      // TODO mysql-connector-java-8.0.22の場合記述異なる？
       Class.forName("com.mysql.jdbc.Driver");
       // Connectionの作成
       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/company_db?serverTimezone=UTC&useSSL=false",
@@ -94,7 +93,7 @@ public class SearchServlet extends HttpServlet {
       conn.close();
 
     } catch (Exception e) {
-//			e.printStackTrace();
+			e.printStackTrace();
 //
 //			String status ="検索に失敗しました。管理者に連絡してください。";
 //			request.setAttribute("status", status);
