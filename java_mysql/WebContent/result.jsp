@@ -5,19 +5,19 @@
 <title></title>
 </head>
 <body>
-	<br>
+  <br>
 
-	<%
-		String status = (String) request.getAttribute("status");
-	%>
+  <%
+    String status = (String) request.getAttribute("status");
+  %>
 
-	<br>
-	<br>
-	<%=status%>
-	<br>
-	<br>
+  <br>
+  <br>
+  <%=status%>
+  <br>
+  <br>
 
-	<a href="./index.jsp">トップページに戻る</a>
+  <a href="./index.jsp">トップページに戻る</a>
 
 
 </body>
