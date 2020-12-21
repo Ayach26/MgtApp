@@ -93,17 +93,17 @@ public class SearchServlet extends HttpServlet {
       conn.close();
 
     } catch (Exception e) {
-			e.printStackTrace();
-//
-//			String status ="検索に失敗しました。管理者に連絡してください。";
-//			request.setAttribute("status", status);
-//			request.getRequestDispatcher("/result.jsp").forward(request, response);
+      e.printStackTrace();
 
+      String status = "検索に失敗しました。管理者に連絡してください。";
+      request.setAttribute("status", status);
+      request.getRequestDispatcher("/result.jsp").forward(request, response);
     } finally {
       try {
         // 念のため、finallyでDBとの接続を切断しておく
         conn.close();
       } catch (Exception e) {
+        e.printStackTrace();
       }
     }
   }
