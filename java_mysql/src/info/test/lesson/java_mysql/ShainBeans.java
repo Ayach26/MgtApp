@@ -20,7 +20,6 @@ public class ShainBeans {
   private PreparedStatement pstmt = null;
   private DataSource ds = null;
 
-
   /**
    * コンストラクタ
    */
@@ -35,6 +34,7 @@ public class ShainBeans {
 
   /**
    * データベースへのアクション
+   *
    * @param sql
    * @throws Exception
    */
@@ -43,7 +43,7 @@ public class ShainBeans {
     // コンテキストを取得
     InitialContext ic = new InitialContext();
     // ルックアップしてデータソースを取得
-    ds = (DataSource) ic.lookup("java:comp/env/jdbc/searchman");
+    ds = (DataSource) ic.lookup("java:comp/env/jdbc/test");
     conn = ds.getConnection();
 
     // sql文を表示

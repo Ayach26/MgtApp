@@ -9,9 +9,17 @@
     <servlet-name>SearchServlet</servlet-name>
     <servlet-class>info.test.lesson.java_mysql.SearchServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>EditServlet</servlet-name>
+    <servlet-class>info.test.lesson.java_mysql.EditServlet</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>SearchServlet</servlet-name>
     <url-pattern>/Search</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditServlet</servlet-name>
+    <url-pattern>/Edit</url-pattern>
   </servlet-mapping>
 </web-app>
