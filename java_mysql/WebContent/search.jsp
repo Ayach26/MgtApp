@@ -18,6 +18,7 @@
       <td><b>性別</b></td>
       <td><b>入社年</b></td>
       <td><b>住所</b></td>
+      <td><b>削除</b></td>
     </tr>
     <%
       while (rset.next()) {
@@ -28,6 +29,7 @@
       <td><%=rset.getString(3)%></td>
       <td><%=rset.getString(4)%></td>
       <td><%=rset.getString(5)%></td>
+      <td><a href="Edit?&mode=delete&id=<%=rset.getString(1)%>">削除</a></td>
     </tr>
     <%
       }
