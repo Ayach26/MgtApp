@@ -36,10 +36,20 @@ public class EditServlet extends HttpServlet {
       }
       break;
 
+    case "delete": // 削除
+      if (shain.deleteData() == false) {
+        status = "失敗しました";
+      }
+      break;
     }
 
     // statusをセットして、result.jspに転送
     request.setAttribute("status", status);
     request.getRequestDispatcher("/result.jsp").forward(request, response);
+  }
+
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+    doPost(request, response);
   }
 }
