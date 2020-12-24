@@ -41,6 +41,17 @@ public class EditServlet extends HttpServlet {
         status = "失敗しました";
       }
       break;
+
+    case "change": // 変更
+      request.setAttribute("shain", shain);
+      request.getRequestDispatcher("/change.jsp").forward(request, response);
+      return;
+
+    case "del_add": // 変更確定
+      if (!(shain.deleteData() && shain.addData())) {
+        status = "失敗しました";
+      }
+      break;
     }
 
     // statusをセットして、result.jspに転送
@@ -48,8 +59,7 @@ public class EditServlet extends HttpServlet {
     request.getRequestDispatcher("/result.jsp").forward(request, response);
   }
 
-  protected void doGet(HttpServletRequest request, HttpServletResponse response)
-      throws ServletException, IOException {
+  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doPost(request, response);
   }
 }
