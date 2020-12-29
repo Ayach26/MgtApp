@@ -32,13 +32,13 @@ public class EditServlet extends HttpServlet {
 
     case "add": // 登録
       if (shain.addData() == false) {
-        status = "失敗しました";
+        status = "登録に失敗しました";
       }
       break;
 
     case "delete": // 削除
       if (shain.deleteData() == false) {
-        status = "失敗しました";
+        status = "削除に失敗しました";
       }
       break;
 
@@ -49,7 +49,7 @@ public class EditServlet extends HttpServlet {
 
     case "del_add": // 変更確定
       if (!(shain.deleteData() && shain.addData())) {
-        status = "失敗しました";
+        status = "変更に失敗しました";
       }
       break;
     }
